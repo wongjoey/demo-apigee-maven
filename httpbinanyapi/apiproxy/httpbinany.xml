@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="2" name="httpbinany">
+    <Basepaths>/httpbinany</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1528210905138</CreatedAt>
+    <CreatedBy>joeywong@google.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>HttpBinAnything-Proxy</DisplayName>
+    <LastModifiedAt>1528210905138</LastModifiedAt>
+    <LastModifiedBy>joeywong@google.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:de6512afa8c358c9ddec5983e75679d3684766ac68a8d3ec797a8ca5085b04d5435c8eb0aa6b2c7b71833826eaeb3713eff7c71d30e8662b6aa9c1394758f061</ManifestVersion>
+    <Policies>
+        <Policy>Assign-Message-1</Policy>
+        <Policy>add-cors</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

@@ -1,0 +1,6 @@
+testcaseid,userstory,testcasedescription,servername,path,testval,units,execute,assertheader,assertcontent,env,assertcontentnegative
+HTTPBINANY-1-1,HTTPBINANY-1,valid call,joeywong-eval-test.apigee.net,/httpbinany-prod,1,c,Y,HTTP/1.1 200 OK,1,DEV,NOT-VALID-CALL
+HTTPBINANY-1-2,HTTPBINANY-1,valid environment,joeywong-eval-test.apigee.net,/httpbinany-prod,2,c,Y,ENV: PROD,2,DEV,NOT-VALID-ENV
+HTTPBINANY-1-3,HTTPBINANY-1,valid test param,joeywong-eval-test.apigee.net,/httpbinany-prod,3,c,Y,HTTP/1.1 200 OK,3,DEV,NOT-VALID-PARAM
+HTTPBINANY-1-4,HTTPBINANY-1,invalid location (woed),joeywong-eval-test.apigee.net,/httpbinany-prod,0,c,N,HTTP/1.1 200 OK,0,DEV,NOT-VALID-PARAM
+HTTPBINANY-1-5,HTTPBINANY-1,invalid location (woed) test that channel word does not exist,joeywong-eval-test.apigee.net,/httpbinany-prod,0,c,N,HTTP/1.1 200 OK,0,DEV,NOT-VALID-PARAM
