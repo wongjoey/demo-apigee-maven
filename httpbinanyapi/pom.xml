@@ -51,7 +51,7 @@
                                 <ignoreResultFailures>true</ignoreResultFailures>
                                 <suppressJMeterOutput>false</suppressJMeterOutput>
                                     <propertiesUser>
-                                        <testData>weather_test.csv</testData>
+                                        <testData>httpbinany_test.csv</testData>
                                         <threadNum>5</threadNum>
                                         <rampUpPeriodSecs>5</rampUpPeriodSecs>
                                         <loopCount>2</loopCount>
@@ -87,7 +87,7 @@
                                 <ignoreResultFailures>true</ignoreResultFailures>
                                 <suppressJMeterOutput>false</suppressJMeterOutput>
                                     <propertiesUser>
-                                        <testData>weather_prod.csv</testData>
+                                        <testData>httpbinany_prod.csv</testData>
                                         <threadNum>5</threadNum>
                                         <rampUpPeriodSecs>5</rampUpPeriodSecs>
                                         <loopCount>2</loopCount>
@@ -102,7 +102,6 @@
                     </plugin>
                 </plugins>
             </build>
-
         </profile>
     </profiles>
 </project>
