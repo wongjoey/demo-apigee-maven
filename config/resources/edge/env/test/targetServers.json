@@ -4,7 +4,7 @@
         "host": "httpbin.org",
         "isEnabled": true,
         "port": 443,
-	"SSLInfo": {
+	"sSLInfo": {
 		"enabled": "true"
 	}
     },
@@ -13,7 +13,7 @@
         "host": "example.com",
         "isEnabled": true,
         "port": 443,
-        "SSLInfo": {
+        "sSLInfo": {
             "clientAuthEnabled": "false",
             "enabled": "true",
             "ignoreValidationErrors": "false",
