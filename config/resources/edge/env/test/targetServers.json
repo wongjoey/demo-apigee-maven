@@ -3,14 +3,17 @@
         "name": "TestTarget",
         "host": "httpbin.org",
         "isEnabled": true,
-        "port": 443
+        "port": 443,
+	"SSLInfo": {
+		"enabled": "true"
+	}
     },
     {
         "name": "AnotherTarget",
         "host": "example.com",
         "isEnabled": true,
         "port": 443,
-        "sSLInfo": {
+        "SSLInfo": {
             "clientAuthEnabled": "false",
             "enabled": "true",
             "ignoreValidationErrors": "false",
