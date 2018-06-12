@@ -15,7 +15,9 @@
     </PostFlow>
     <Flows/>
     <HTTPTargetConnection>
-        <Properties/>
-        <URL>https://httpbin.org/anything</URL>
+        <LoadBalancer>
+            <Server name="TestTarget"/>
+        </LoadBalancer>
+        <Path>/anything</Path>
     </HTTPTargetConnection>
 </TargetEndpoint>
