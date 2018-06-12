@@ -1,0 +1,22 @@
+[
+    {
+        "name": "TestTarget",
+        "host": "httpbin.org",
+        "isEnabled": true,
+        "port": 443
+    },
+    {
+        "name": "AnotherTarget",
+        "host": "example.com",
+        "isEnabled": true,
+        "port": 443,
+        "sSLInfo": {
+            "clientAuthEnabled": "false",
+            "enabled": "true",
+            "ignoreValidationErrors": "false",
+            "keyAlias": "key_alias",
+            "keyStore": "keystore_name",
+            "trustStore": "truststore_name"
+        }
+    }
+]

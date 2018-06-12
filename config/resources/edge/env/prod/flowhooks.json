@@ -1,0 +1,12 @@
+[
+	{
+	    "name":"PreProxyFlowHook",
+	    "continueOnError":"true",
+	    "sharedFlow":"Add-CORS"
+	 },
+	 {
+	    "name":"PreTargetFlowHook",
+	    "continueOnError":"true",
+	    "sharedFlow":"Add-CORS"
+	 }
+ ]

@@ -1,0 +1,12 @@
+[
+    {
+        "JSONPathsFault": [
+            "$.store.book[*].author"
+        ],
+        "name": "default",
+        "variables": [
+            "request.header.user-agent",
+            "request.formparam.password"
+        ]
+    }
+]

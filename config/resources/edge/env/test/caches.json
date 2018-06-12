@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Sample Cache",
+    "description": "Deployed cache"
+  },
+  {
+    "name": "SampleMetadata",
+    "description": "Sample metadata cache",
+    "diskSizeInMB": 0,
+    "distributed": true,
+    "inMemorySizeInKB": 0,
+    "maxElementsInMemory": 0,
+    "maxElementsOnDisk": 0,
+    "overflowToDisk": false,
+    "persistent": false
+  }
+]
