@@ -23,17 +23,6 @@
                         }
                     ]
                 }
-            ],
-            "targets": [
-                {
-                    "name": "default.xml",
-                    "tokens": [
-                        {
-                            "xpath": "/TargetEndpoint/HTTPTargetConnection/URL",
-                            "value": "https://httpbin.org/anything"
-                        }
-                    ]
-                }
             ]
         },
         {
@@ -56,17 +45,6 @@
                         {
                             "xpath": "/ProxyEndpoint/HTTPProxyConnection/BasePath",
                             "value": "/httpbinany-prod"
-                        }
-                    ]
-                }
-            ],
-            "targets": [
-                {
-                    "name": "default.xml",
-                    "tokens": [
-                        {
-                            "xpath": "/TargetEndpoint/HTTPTargetConnection/URL",
-                            "value": "https://httpbin.org/anything"
                         }
                     ]
                 }
