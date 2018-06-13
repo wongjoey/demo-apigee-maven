@@ -3,7 +3,10 @@
         "name": "TestTarget",
         "host": "httpbin.org",
         "isEnabled": true,
-        "port": 443
+        "port": 443,
+	"sSLInfo": {
+		"enabled": "true"
+	}
     },
     {
         "name": "AnotherTarget",
