@@ -19,7 +19,7 @@
                     "tokens": [
                         {
                             "xpath": "/ProxyEndpoint/HTTPProxyConnection/BasePath",
-                            "value": "/v1/httpbinany-test"
+                            "value": "/v2/httpbinany-test"
                         }
                     ]
                 }
