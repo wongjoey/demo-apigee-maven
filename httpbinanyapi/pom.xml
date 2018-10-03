@@ -42,7 +42,7 @@
                     <executions>
                         <execution>
                             <id>jmeter-tests</id>
-                            <phase>install</phase>
+                            <phase>test</phase>
                             <goals>
                                 <goal>jmeter</goal>
                             </goals>
@@ -78,7 +78,7 @@
                     <executions>
                         <execution>
                             <id>jmeter-tests</id>
-                            <phase>install</phase>
+                            <phase>test</phase>
                             <goals>
                                 <goal>jmeter</goal>
                             </goals>
