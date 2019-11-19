@@ -165,6 +165,7 @@
                 <apigee.refresh>${refresh}</apigee.refresh> <!-- optional: Refresh token override -->
                 <apigee.clientid>${clientId}</apigee.clientid> <!-- optional: Oauth Client Id - Default is edgecli-->
                 <apigee.clientsecret>${clientSecret}</apigee.clientsecret> <!-- optional: Oauth Client Secret Default is edgeclisecret-->
+                <apigee.options>override</apigee.options>
                 <!--apigee.override.delay>10</apigee.override.delay-->
                 <!--apigee.delay>1000</apigee.delay-->
             </properties>
@@ -190,6 +191,7 @@
                 <apigee.refresh>${refresh}</apigee.refresh> <!-- optional: Refresh token override -->
                 <apigee.clientid>${clientId}</apigee.clientid> <!-- optional: Oauth Client Id - Default is edgecli-->
                 <apigee.clientsecret>${clientSecret}</apigee.clientsecret> <!-- optional: Oauth Client Secret Default is edgeclisecret-->
+                <apigee.options>override</apigee.options>
                 <!--apigee.override.delay>10</apigee.override.delay-->
                 <!--apigee.delay>1000</apigee.delay-->
             </properties>
