@@ -73,7 +73,7 @@
             <plugin>
                 <groupId>io.apigee.build-tools.enterprise4g</groupId>
                 <artifactId>apigee-edge-maven-plugin</artifactId>
-                <version>1.1.6</version>
+                <version>2.1.0</version>
                 <executions>
                     <execution>
                         <id>configure-bundle</id>
@@ -94,20 +94,41 @@
             <plugin>
                 <groupId>com.apigee.edge.config</groupId>
                 <artifactId>apigee-config-maven-plugin</artifactId>
-                <version>1.2.1</version>
+                <version>2.1.1</version>
                 <executions>
                     <execution>
-                        <id>create-config-cache</id>
-                        <phase>verify</phase>                        
+                        <id>create-config-references</id>
+                        <phase>install</phase>                        
                         <goals>
-                            <goal>caches</goal>
+                            <goal>references</goal>
                         </goals>
                     </execution>
                     <execution>
                         <id>create-config-targetserver</id>
-                        <phase>verify</phase>                        
+                        <phase>install</phase>                        
                         <goals>
                             <goal>targetservers</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>create-config-kvm</id>
+                        <phase>install</phase>                        
+                        <goals>
+                            <goal>keyvaluemaps</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>create-config-keystores</id>
+                        <phase>install</phase>                        
+                        <goals>
+                            <goal>keystores</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>create-config-aliases</id>
+                        <phase>install</phase>                        
+                        <goals>
+                            <goal>aliases</goal>
                         </goals>
                     </execution>
                     <execution>
@@ -138,6 +159,20 @@
                             <goal>apps</goal>
                         </goals>
                     </execution>
+                    <execution>
+                        <id>create-config-reports</id>
+                        <phase>install</phase>                        
+                        <goals>
+                            <goal>reports</goal>
+                        </goals>
+                    </execution>
+                    <execution> 
+                        <id>create-config-flowhooks</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>flowhooks</goal>
+                        </goals>
+                    </execution>
                 </executions>
             </plugin> 
         </plugins>
@@ -147,25 +182,16 @@
         <profile>
             <id>test</id>
             <properties>
-                <org>testmyapi</org>  <!-- default org, replace with default org to avoid passing parameter e.g. -Dorg testmyapi -->
-                <options>validate</options>  <!-- default org, replace with default org to avoid passing parameter e.g. -Dorg testmyapi -->
                 <apigee.profile>test</apigee.profile>
-                <apigee.env>test</apigee.env>
-                <apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+                <apigee.hosturl>https://apigee.googleapis.com</apigee.hosturl>
                 <apigee.apiversion>v1</apigee.apiversion>
                 <apigee.org>${org}</apigee.org>
-                <apigee.username>${username}</apigee.username>
-                <apigee.password>${password}</apigee.password>
+                <apigee.env>${env}</apigee.env>
                 <apigee.options>${options}</apigee.options>
                 <apigee.revision>${revision}</apigee.revision> <!-- used while trying to update revision, use when option=update only -->
-                <apigee.tokenurl>${tokenurl}</apigee.tokenurl> <!-- optional: oauth -->
-                <apigee.mfatoken>${mfatoken}</apigee.mfatoken> <!-- optional: mfa -->
-                <apigee.authtype>${authtype}</apigee.authtype> <!-- optional: oauth|basic(default) -->
+                <apigee.authtype>oauth</apigee.authtype> <!-- optional: oauth|basic(default) -->
                 <apigee.bearer>${bearer}</apigee.bearer> <!-- optional: Bearer token override -->
-                <apigee.refresh>${refresh}</apigee.refresh> <!-- optional: Refresh token override -->
-                <apigee.clientid>${clientId}</apigee.clientid> <!-- optional: Oauth Client Id - Default is edgecli-->
                 <apigee.clientsecret>${clientSecret}</apigee.clientsecret> <!-- optional: Oauth Client Secret Default is edgeclisecret-->
-                <apigee.options>override</apigee.options>
                 <!--apigee.override.delay>10</apigee.override.delay-->
                 <!--apigee.delay>1000</apigee.delay-->
             </properties>
@@ -173,25 +199,16 @@
         <profile>
             <id>prod</id>
             <properties>
-                <org>testmyapi</org>  <!-- default org, replace with default org to avoid passing parameter e.g. -Dorg testmyapi -->
-                <options>validate</options>  <!-- default org, replace with default org to avoid passing parameter e.g. -Dorg testmyapi -->
                 <apigee.profile>prod</apigee.profile>
-                <apigee.env>prod</apigee.env>
-                <apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+                <apigee.hosturl>https://apigee.googleapis.com</apigee.hosturl>
                 <apigee.apiversion>v1</apigee.apiversion>
                 <apigee.org>${org}</apigee.org>
-                <apigee.username>${username}</apigee.username>
-                <apigee.password>${password}</apigee.password>
+                <apigee.env>${env}</apigee.env>
                 <apigee.options>${options}</apigee.options>
                 <apigee.revision>${revision}</apigee.revision> <!-- used while trying to update revision, use when option=update only -->
-                <apigee.tokenurl>${tokenurl}</apigee.tokenurl> <!-- optional: oauth -->
-                <apigee.mfatoken>${mfatoken}</apigee.mfatoken> <!-- optional: mfa -->
-                <apigee.authtype>${authtype}</apigee.authtype> <!-- optional: oauth|basic(default) -->
+                <apigee.authtype>oauth</apigee.authtype> <!-- optional: oauth|basic(default) -->
                 <apigee.bearer>${bearer}</apigee.bearer> <!-- optional: Bearer token override -->
-                <apigee.refresh>${refresh}</apigee.refresh> <!-- optional: Refresh token override -->
-                <apigee.clientid>${clientId}</apigee.clientid> <!-- optional: Oauth Client Id - Default is edgecli-->
                 <apigee.clientsecret>${clientSecret}</apigee.clientsecret> <!-- optional: Oauth Client Secret Default is edgeclisecret-->
-                <apigee.options>override</apigee.options>
                 <!--apigee.override.delay>10</apigee.override.delay-->
                 <!--apigee.delay>1000</apigee.delay-->
             </properties>
